@@ -57,7 +57,7 @@ root.mainloop()
 
 
 
-#root.title('Course selection')
+#root.title('')
 
 
 #ww = welcome_window(frame1)
