@@ -1,38 +1,52 @@
 from tkinter import *
-#t=Tk()
-#t.geometry("425x280")
 
-root.geometry('425x280')
+root = Tk()
+root.geometry('800x500')
+root.title('Ormiston Computing')
 
-
-def login():
+#Second frame
+def questionspage():
     f2=Frame()
     f2.place(x=0,y=0,width=425,height=280)
-    e1=Entry(f2)
-    e1.pack()
-    e2=Entry(f2)
-    e2.pack()
+    
     b2=Button(f2,text="Login", command=namepage)
     b2.pack()
-#making the frame the same size as the root geometry
-def frameone():
-    f1=Frame()
-    f1.place(x=0,y=0,width=425,height=280)
 
-    b1=Button(f1, text="Click!", command=login)
-    b1.pack()
+#Conditions for moving onto the questions page
+#def openquestionspage():
+    
+    
+
+#First frame where user enters their name
+f1=Frame()
+f1.place(x=0,y=0,width=425,height=280)#making the frame the same size as the root geometry
+
+label1=Label(text="ENTER YOUR NAME")
+label1.place(y=5)
+
+usersname=Entry(f1)
+usersname.place(y=30)
+
+b1=Button(f1, text="NEXT", command=questionspage)
+b1.place(y=60)
+
+
+
+
+
+
 
 def namepage():
     f3=Frame()
     f3.place(x=0,y=0,width=425,height=280)
     e3=Entry(f3)
     e3.pack()
-    b3=Button(f3,text="Back to frame 1", command=frameone)
+    b3=Button(f3,text="Back to frame 1",command=f1)
     b3.pack()
 
 
-root = Tk(f1)
-#t.mainloop()
+
+root.resizable(False,False)
 root.mainloop()
 
 
@@ -46,5 +60,5 @@ root.mainloop()
 
 
 #root.configure(bg='#f2f2f2')
-#root.resizable(False,False)
+
 
