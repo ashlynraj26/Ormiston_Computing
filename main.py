@@ -30,8 +30,12 @@ usersname.place(y=30)
 b1=Button(f1, text="NEXT", command=questionspage)
 b1.place(y=60)
 
+def error1():
+    Label(self.frame1, text="Do not leave blank fields", fg="red").pack()
+    
 
-
+if usersname == "":
+    error1()
 
 
 
