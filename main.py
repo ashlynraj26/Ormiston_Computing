@@ -9,7 +9,7 @@ def questionspage():
     f2=Frame()
     f2.place(x=0,y=0,width=425,height=280)
     
-    b2=Button(f2,text="New player", command=namepage)
+    b2=Button(f2,text="Player Name:", command=namepage)
     b2.pack()
 
     b3=Button(f2,text="+", command=namepage)
@@ -61,10 +61,20 @@ if usersname == "":
 def namepage():
     f3=Frame()
     f3.place(x=0,y=0,width=425,height=280)
-    e3=Entry(f3)
-    e3.pack()
-    b3=Button(f3,text="Back to frame 1",command=f1)
+
+    label2=Label(f3, text="SELECT DIFFICULTY LEVEL:")
+    label2.place(y=5)
+    
+    b3=Button(f3,text="EASY",command=f1)
     b3.pack()
+
+    b8=Button(f3,text="MEDIUM", command=namepage)
+    b8.pack()
+
+    b9=Button(f3,text="HARD", command=namepage)
+    b9.pack()
+
+   
 
 
 
