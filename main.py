@@ -9,8 +9,26 @@ def questionspage():
     f2=Frame()
     f2.place(x=0,y=0,width=425,height=280)
     
-    b2=Button(f2,text="Login", command=namepage)
+    b2=Button(f2,text="New player", command=namepage)
     b2.pack()
+
+    b3=Button(f2,text="+", command=namepage)
+    b3.pack()
+
+    b4=Button(f2,text="-", command=namepage)
+    b4.pack()
+
+    b5=Button(f2,text="Randomise", command=namepage)
+    b5.pack()
+
+    b6=Button(f2,text="÷", command=namepage)
+    b6.pack()
+
+    b7=Button(f2,text="×", command=namepage)
+    b7.pack()
+
+
+
 
 #Conditions for moving onto the questions page
 #def openquestionspage():
