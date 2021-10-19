@@ -3,7 +3,7 @@ import random
 
 root = Tk()
 root.geometry('700x400')
-root.title('Ormiston Computing')      #CORRECT ONE
+root.title('Ormiston Computing')      
 
 
 
