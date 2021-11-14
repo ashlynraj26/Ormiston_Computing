@@ -36,7 +36,7 @@ class interface:
    #validates and checks for user input     
     def checkentry(self):
 
-        self.usersname_text = self.usersname.get()
+        self.usersname_text = self.usersname.get() 
         if self.usersname_text =="":
             
             self.errormsg=Label(self.f1, text="Name required", font = "Helvetica 15 bold", fg="red", bg="#7CFC00")
@@ -176,16 +176,27 @@ class interface:
 
 
 ############################################################################## SCOREBOARD ###################################################################################
+    def write(self):
+          
+         self.studentscoring = open('results.txt', 'a')
+        
+         self.studentscoring.write(str(self.usersname_text) + "  ")
+         self.studentscoring.write(str(score) + "/11" + "\n")
+         self.studentscoring.close() 
 
+        
     def scoreboard(self):
          self.f4=Frame(bg="#FFFF00")
          self.f4.place(x=0,y=0,width=700,height=400)
          
          #score displayed on scoreboard
-         self.playername=Label(self.f4, text=f"{score}/10", font="Helvetica 100 bold", bg="#FFFF00")
+         self.playername=Label(self.f4, text=f"{score}/11", font="Helvetica 100 bold", bg="#FFFF00")
          self.playername.place(x=240, y=140)
 
-         self.newp = Button(self.f4, text="New Player", width=16, height=3, command=interface)
+         self.newp = Button(self.f4, text="New Player", width=16, height=3, command=lambda: [interface(), self.write()])
+         
+         #button = Button(root, text="test", command=lambda:[funct1(),funct2()])
+         
          self.newp.place(y=300, x=500)
          self.Font_Tuple7 = ("helvetica", 16, "bold")
          self.newp.configure(font= self.Font_Tuple7)
@@ -195,7 +206,7 @@ class interface:
          self.Font_Tuple8 = ("helvetica", 16, "bold")
          self.home.configure(font= self.Font_Tuple8)
 
-       
+
     
 
 ########################################################################## Medium questions page ##########################################################################
