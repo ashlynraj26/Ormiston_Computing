@@ -1,6 +1,7 @@
 from tkinter import *
 import random
 
+
 root = Tk()
 root.geometry('700x400')
 root.title('Ormiston Computing')      #CORRECT ONE
@@ -145,7 +146,7 @@ class interface:
 
     
 
-#Displays the math question by selecting two random values from the "num" list      CLASS
+### NEXT CLASS  Displays the math question by selecting two random values from the "num" list      CLASS
 
     def nextq_easy(self):
          self.start.destroy()
@@ -201,7 +202,7 @@ class interface:
          self.Font_Tuple7 = ("helvetica", 16, "bold")
          self.newp.configure(font= self.Font_Tuple7)
 
-         self.home = Button(self.f4, text="HOME", width=16, height=3, command=self.difficultypage)
+         self.home = Button(self.f4, text="HOME", width=16, height=3, command=lambda: [self.difficultypage(), self.write()])#command=self.difficultypage
          self.home.place(y=300, x=50)
          self.Font_Tuple8 = ("helvetica", 16, "bold")
          self.home.configure(font= self.Font_Tuple8)
